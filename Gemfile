@@ -32,6 +32,3 @@ group :production do
   gem 'tiny_tds'
   gem 'rails_12factor', '0.0.2'
 end
-
-
-ruby '2.3.0'
