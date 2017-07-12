@@ -1,0 +1,23 @@
+<div class="content-wrap">
+  
+  <%= devise_error_messages! %>
+    <h6>Sign Up</h6>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    
+    <%= f.text_field :email, autofocus: true, class: "form-control", placeholder:"E-mail" %>
+  
+    <%= f.text_field :username, autofocus: true, class: "form-control", placeholder:"User Name" %>
+    
+    <%= f.password_field :password, autocomplete: "off", class:"form-control", type:"password", placeholder:"Password" %>
+    
+    <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control", type:"password", placeholder:"Password Confirmation" %>
+    
+  
+    <div class="action">
+        <%= f.submit "Sign up" , class:"btn btn-primary signin" %>
+    </div>
+    
+    <% end %>
+</div>
+
+
