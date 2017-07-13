@@ -1,0 +1,32 @@
+<h1>Listing Categories</h1>
+<br>
+
+<div class="row">
+<div class="col-md-4">
+  
+<table id="datatable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td width="100"><%= category.name.rock_title %></td>
+        <td><%= link_to 'Edit', edit_category_path(category) %> || <%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-md-5">
+<%= link_to 'Create Category', new_category_path %>
+<br>
+<%= link_to 'Create Project', new_project_path %>
+</div>

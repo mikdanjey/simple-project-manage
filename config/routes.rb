@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+ 
+  resources :projects
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
@@ -15,5 +17,7 @@ Rails.application.routes.draw do
   end
   
   resources :users
+  
+  resources :categories
 
 end

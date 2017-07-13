@@ -1,0 +1,17 @@
+<div class="header">
+     <div class="container">
+        <div class="row">
+           <div class="col-md-6">
+              <div class="logo">
+                 <h1><a href="/" class="pull">Hai, <%= current_user.username.rock_title %>.</a></h1>
+              </div>
+           </div>
+           
+           <div class="col-md-6">
+              <div class="logo">
+                 <h1><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete', class: "pull-right" %><h1>
+              </div>
+           </div>
+        </div>
+     </div>
+</div>

@@ -1,0 +1,8 @@
+en:
+  gflash:
+    titles:
+      notice:   "Notice."
+      success:  "Success."
+      warning:  "Warnings raised."
+      error:    "Error occurred."
+      progress: "In progress, please wait."

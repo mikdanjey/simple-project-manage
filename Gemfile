@@ -14,6 +14,11 @@ gem 'devise', '~> 4.3'
 gem 'valid_url'
 gem "gritter", "1.2.0"
 
+gem 'jquery-datatables-rails', '~> 3.4.0'
+
+# This Gem is My Own Gem
+gem 'string_rocker', '~> 0.1.0'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'

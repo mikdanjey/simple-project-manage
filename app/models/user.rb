@@ -14,4 +14,5 @@ class User < ActiveRecord::Base
     @login || self.username
   end
   
+  has_many :projects
 end

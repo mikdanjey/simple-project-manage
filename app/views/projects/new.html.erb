@@ -1,0 +1,27 @@
+<h1>New Project</h1>
+
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :users_id, value: current_user.id %>
+  <div class="field">
+    <%= f.label :categories_id %><br>
+    <%= f.select :categories_id, options_for_select(Category.all.map{ |c| [c.name.rock_title, c.id] }, {:include_blank => true}), required: true%>
+    <%= link_to 'Add Category', new_category_path %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
